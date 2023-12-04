@@ -1,12 +1,17 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class WordCounter {
 
-    private String[] text;
+    private ArrayList<String> text = new ArrayList<>();
     private HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
 
-    public WordCounter(String text){
-        this.text = text.split(" ");;
+    public WordCounter(ArrayList<String> sentences){
+        for(String sentence : sentences){
+            String[] sentenceList = sentence.substring(0, sentence.length() - 1).split(" ");
+            for (String element : sentenceList) {
+            }
+        }
     }
 
     public HashMap count(){
