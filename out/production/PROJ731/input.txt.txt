@@ -1,7 +1,79 @@
-Google has written a paper on various technologies it uses. It is using technologies like Map-Reduce programming model as well as its file system (GFS). As Hadoop was originally written for the Nutch search engine project. When Doug Cutting and his team were working on it, very soon Hadoop became a top-level project due to its huge popularity. Let us understand Hadoop Defination and Meaning.
+The carrot (Daucus carota subsp. sativus) is a root vegetable, typically orange in color, though heirloom variants including purple, black, red, white, and yellow cultivars exist,[2][3][4] all of which are domesticated forms of the wild carrot, Daucus carota, native to Europe and Southwestern Asia. The plant probably originated in Persia and was originally cultivated for its leaves and seeds. The most commonly eaten part of the plant is the taproot, although the stems and leaves are also eaten. The domestic carrot has been selectively bred for its enlarged, more palatable, less woody-textured taproot.
 
-Apache Hadoop is an open source framework written in Java. The basic Hadoop programming language is Java, but this does not mean you can code only in Java. You can code in C, C++, Perl, Python, ruby etc. as well. You can code the Hadoop framework in any language but it will be more efficient to code in java as you will have lower level control of the code.
+The carrot is a biennial plant in the umbellifer family, Apiaceae. At birth, it grows a rosette of leaves while building up the enlarged taproot. Fast-growing cultivars mature within about three months (90 days) of sowing the seed, while slower-maturing cultivars need a month longer (120 days). The roots contain high quantities of alpha- and beta-carotene, lycopene, anthocyanins, lutein,[5] and are a good source of vitamin A, vitamin K, and vitamin B6. Black carrots are one of the richest sources of anthocyanins (250–300 mg/100 g fresh root weight), and hence possesses high antioxidant ability i.e. almost 20–35 times higher than red/orange carrots and five times higher than beetroot.[6]
 
-Big Data and Hadoop efficiently processes large volumes of data on a cluster of commodity hardware. Hadoop is for processing huge volume of data. Commodity hardware is the low-end hardware, they are cheap devices which are very economical. Hence, Hadoop is very economic.
+The United Nations Food and Agriculture Organization (FAO) reports that world production of carrots and turnips (these plants are combined by the FAO) for 2020 was 41 million tonnes, with over 44% of the world total grown in China. Carrots are commonly consumed raw or cooked in various cuisines.
 
-Hadoop can be setup on a single machine (pseudo-distributed mode, but it shows its real power with a cluster of machines. We can scale it to thousand nodes on the fly i.e, without any downtime. Therefore, we need not make any system down to add more systems in the cluster. Follow this guide to learn Hadoop installation on a multi-node cluster.
+Etymology
+
+A depiction labeled "garden" carrot from the Juliana Anicia Codex, a 6th-century AD Constantinopolitan copy of Dioscorides' 1st-century Greek pharmacopoeia. The facing page states that "the root can be cooked and eaten."[7]
+The word is first recorded in English around 1530 and was borrowed from the Middle French carotte,[8] itself from the Late Latin carōta, from the ancient Greek καρωτόν (karōtón), originally from the Proto-Indo-European root *ker- ('horn'), due to its horn-like shape. In Old English, carrots (typically white at the time) were not clearly distinguished from parsnips: the two were collectively called moru or more (from Proto-Indo-European *mork- 'edible root', cf. German Möhre or Russian морковь (morkov)).[citation needed]
+
+Various languages still use the same word for carrot as they do for root, e.g. the Dutch wortel.[9]
+
+History
+Both written history and molecular genetic studies indicate that the domestic carrot has a single origin in Central Asia.[2][3] Its wild ancestors probably originated in Persia (regions of which are now Iran and Afghanistan), which remains the centre of diversity for the wild carrot Daucus carota. A naturally occurring subspecies of the wild carrot was presumably bred selectively over the centuries to reduce bitterness, increase sweetness and minimise the woody core; this process produced the familiar garden vegetable.[10][11]
+
+When they were first cultivated, carrots were grown for their aromatic leaves and seeds rather than their roots. Carrot seeds have been found in Switzerland and Southern Germany dating back to 2000–3000 BC.[12] Some close relatives of the carrot are still grown for their leaves and seeds, such as parsley, coriander (cilantro), fennel, anise, dill and cumin. The first mention of the root in classical sources is from the 1st century AD;[13] the Romans ate a root vegetable called pastinaca,[14] which may have been either the carrot or the closely related parsnip.[15][16]
+
+The plant is depicted and described in the Eastern Roman Juliana Anicia Codex, a 6th-century AD Constantinopolitan copy of the Greek physician Dioscorides' 1st-century pharmacopoeia of herbs and medicines, De Materia Medica. Three different types[clarification needed] of carrots are depicted, and the text states that "the root can be cooked and eaten".[17] Another copy of this work, Codex Neapolitanes from late 6th or early 7th century, has basically the same illustrations but with roots in purple.[18]
+
+The plant was introduced into Spain by the Moors in the 8th century.[19] In the 10th century, roots from West Asia, India and Europe were purple.[20] The modern carrot originated in Afghanistan at about this time.[13] The 11th-century Jewish scholar Simeon Seth describes both red and yellow carrots,[21] as does the 12th-century Arab-Andalusian agriculturist, Ibn al-'Awwam.[22] Cultivated carrots appeared in China in the 12th century,[23] and in Japan in the 16th or 17th century.[24]
+
+The orange carrot was created by the Dutch growers. There is pictorial evidence that the orange carrot existed at least in 512, but it is probable that it was not a stable variety until the Dutch bred the cultivar termed the "Long Orange" at the turn of the 18th century.[25] Some claim that the Dutch created the orange carrots to honor the Dutch flag at the time and William of Orange,[20][26] but other authorities argue these claims lack convincing evidence and it is possible that the orange carrot was favored by the Europeans because it does not brown the soups and stews as the purple carrot does and, as such, was more visually attractive.[25]
+
+Modern carrots were described at about this time by the English antiquary John Aubrey (1626–1697): "Carrots were first sown at Beckington in Somersetshire. Some very old Man there [in 1668] did remember their first bringing hither."[27] European settlers introduced the carrot to colonial America in the 17th century.[28]
+
+Outwardly purple carrots, still orange on the inside, were sold in British stores beginning in 2002.[20]
+
+Description
+
+Seedlings shortly after germination
+Daucus carota is a biennial plant. In the first year, its rosette of leaves produces large amounts of sugars, which are stored in the taproot to provide energy for the plant to flower in the second year.[citation needed]
+
+Soon after germination, carrot seedlings show a distinct demarcation between taproot and stem: the stem is thicker and lacks lateral roots. At the upper end of the stem is the seed leaf. The first true leaf appears about 10–15 days after germination. Subsequent leaves are alternate (with a single leaf attached to a node), spirally arranged, and pinnately compound, with leaf bases sheathing the stem. As the plant grows, the bases of the seed leaves, near the taproot, are pushed apart. The stem, located just above the ground, is compressed and the internodes are not distinct. When the seed stalk elongates for flowering, the tip of the stem narrows and becomes pointed, and the stem extends upward to become a highly branched inflorescence up to 60–200 cm (20–80 in) tall.[29]
+
+Most of the taproot consists of a pulpy outer cortex (phloem) and an inner core (xylem). High-quality carrots have a large proportion of cortex compared to core. Although a completely xylem-free carrot is not possible, some cultivars have small and deeply pigmented cores; the taproot can appear to lack a core when the colour of the cortex and core are similar in intensity. Taproots are typically long and conical, although cylindrical and nearly-spherical cultivars are available. The root diameter can range from 1 cm (3⁄8 in) to as much as 10 cm (4 in) at the widest part. The root length ranges from 5 to 50 cm (2 to 20 in), although most are between 10 and 25 cm (4 and 10 in).[29]
+
+
+Daucus carota umbel (inflorescence). Individual flowers are borne on undivided pedicels originating from a common node.
+
+Top view of Daucus carota inflorescence, showing umbellets; the central flower is dark red.
+Flower development begins when the flat meristem changes from producing leaves to an uplifted, conical meristem capable of producing stem elongation and a cluster of flowers. The cluster is a compound umbel, and each umbel contains several smaller umbels (umbellets). The first (primary) umbel occurs at the end of the main floral stem; smaller secondary umbels grow from the main branch, and these further branch into third, fourth, and even later-flowering umbels.[29]
+
+A large, primary umbel can contain up to 50 umbellets, each of which may have as many as 50 flowers; subsequent umbels have fewer flowers. Individual flowers are small and white, sometimes with a light green or yellow tint. They consist of five petals, five stamens, and an entire calyx. The stamens usually split and fall off before the stigma becomes receptive to receive pollen. The stamens of the brown, male, sterile flowers degenerate and shrivel before the flower fully opens. In the other type of male sterile flower, the stamens are replaced by petals, and these petals do not fall off. A nectar-containing disc is present on the upper surface of the carpels.[29]
+
+
+Flowers consist of five petals, five stamens, and an entire calyx.
+Flowers change sex in their development, so the stamens release their pollen before the stigma of the same flower is receptive. The arrangement is centripetal, meaning the oldest flowers are near the edge and the youngest flowers are in the center. Flowers usually first open at the outer edge of the primary umbel, followed about a week later on the secondary umbels, and then in subsequent weeks in higher-order umbels.[29]
+
+The usual flowering period of individual umbels is 7 to 10 days, so a plant can be in the process of flowering for 30–50 days. The distinctive umbels and floral nectaries attract pollinating insects. After fertilization and as seeds develop, the outer umbellets of an umbel bend inward causing the umbel shape to change from slightly convex or fairly flat to concave, and when cupped it resembles a bird's nest.[29]
+
+
+Carrots in Ljubljana Central Market
+The fruit that develops is a schizocarp consisting of two mericarps; each mericarp is a true seed. The paired mericarps are easily separated when they are dry. Premature separation (shattering) before harvest is undesirable because it can result in seed loss. Mature seeds are flattened on the commissural side that faced the septum of the ovary. The flattened side has five longitudinal ribs. The bristly hairs that protrude from some ribs are usually removed by abrasion during milling and cleaning. Seeds also contain oil ducts and canals. Seeds vary somewhat in size, ranging from less than 500 to more than 1000 seeds per gram.[29]
+
+The carrot is a diploid species, and has nine relatively short, uniform-length chromosomes (2n=18).[2][3] The genome size is estimated to be 473 mega base pairs, which is four times larger than Arabidopsis thaliana, one-fifth the size of the maize genome, and about the same size as the rice genome.[30]
+
+Chemistry
+
+β-Carotene structure. Carotene is responsible for the orange colour of carrots and many other fruits and vegetables.
+Polyacetylenes can be found in Apiaceae vegetables like carrots where they show cytotoxic activities.[31][32] Falcarinol and falcarindiol (cis-heptadeca-1,9-diene-4,6-diyne-3,8-diol)[33] are such compounds. This latter compound shows antifungal activity towards Mycocentrospora acerina and Cladosporium cladosporioides.[33] Falcarindiol is the main compound responsible for bitterness in carrots.[34]
+
+Other compounds such as pyrrolidine (present in the leaves),[35] 6-hydroxymellein,[36] 6-methoxymellein, eugenin, 2,4,5-trimethoxybenzaldehyde (gazarin) or (Z)-3-acetoxy-heptadeca-1,9-diene-4,6-diin-8-ol (falcarindiol 3-acetate) can also be found in carrot.[citation needed]
+
+Cultivation
+
+Workers harvesting carrots, Imperial Valley, California, 1948
+Carrots are grown from seed and can take up to four months (120 days) to mature, but most cultivars mature within 70 to 80 days under the right conditions.[37] They grow best in full sun but tolerate some shade.[38] The optimum temperature is 16 to 21 °C (61 to 70 °F).[39] The ideal soil is deep, loose and well-drained, sandy or loamy, with a pH of 6.3 to 6.8.[40]
+
+Fertilizer should be applied according to soil type because the crop requires low levels of nitrogen, moderate phosphate and high potash. Rich or rocky soils should be avoided, as these will cause the roots to become hairy and/or misshapen.[41] Irrigation is applied when needed to keep the soil moist. After sprouting, the crop is eventually thinned to a spacing of 8 to 10 cm (3 to 4 in) and weeded to prevent competition beneath the soil.[37][42]
+
+Cultivation problems
+See also: List of carrot diseases
+There are several diseases that can reduce the yield and market value of carrots. The most devastating carrot disease is Alternaria leaf blight, which has been known to eradicate entire crops. A bacterial leaf blight caused by Xanthomonas campestris can also be destructive in warm, humid areas. Root knot nematodes (Meloidogyne species) can cause stubby or forked roots, or galls.[43] Cavity spot, caused by the oomycetes Pythium violae and Pythium sulcatum, results in irregularly shaped, depressed lesions on the taproots.[44]
+
+Physical damage can also reduce the value of carrot crops. The two main forms of damage are splitting, whereby a longitudinal crack develops during growth that can be a few centimetres to the entire length of the root, and breaking, which occurs postharvest. These disorders can affect over 30% of commercial crops. Factors associated with high levels of splitting include wide plant spacing, early sowing, lengthy growth durations, and genotype.[45]
+
+Companion planting
+They can also be good companions for other plants; if left to flower, the carrot, like any umbellifer, attracts predatory wasps that kill many garden pests.[46]

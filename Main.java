@@ -86,6 +86,7 @@ public class Main {
                 result.add(element);
             }
         }
+        System.out.println(result);
 
         return result;
     }
