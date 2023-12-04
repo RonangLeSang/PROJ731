@@ -1,0 +1,7 @@
+Google has written a paper on various technologies it uses. It is using technologies like Map-Reduce programming model as well as its file system (GFS). As Hadoop was originally written for the Nutch search engine project. When Doug Cutting and his team were working on it, very soon Hadoop became a top-level project due to its huge popularity. Let us understand Hadoop Defination and Meaning.
+
+Apache Hadoop is an open source framework written in Java. The basic Hadoop programming language is Java, but this does not mean you can code only in Java. You can code in C, C++, Perl, Python, ruby etc. as well. You can code the Hadoop framework in any language but it will be more efficient to code in java as you will have lower level control of the code.
+
+Big Data and Hadoop efficiently processes large volumes of data on a cluster of commodity hardware. Hadoop is for processing huge volume of data. Commodity hardware is the low-end hardware, they are cheap devices which are very economical. Hence, Hadoop is very economic.
+
+Hadoop can be setup on a single machine (pseudo-distributed mode, but it shows its real power with a cluster of machines. We can scale it to thousand nodes on the fly i.e, without any downtime. Therefore, we need not make any system down to add more systems in the cluster. Follow this guide to learn Hadoop installation on a multi-node cluster.
