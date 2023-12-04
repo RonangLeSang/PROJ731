@@ -77,14 +77,13 @@ public class Main {
         }
     }
 
-    private static Map<String, Integer> processSentences(List<String> sentences) {
-        Map<String, Integer> result = new HashMap<>();
+    private static ArrayList<String> processSentences(List<String> sentences) {
+        ArrayList<String> result = new ArrayList<>();
 
-        for (String sentence : sentences) {
-            // Implement your own logic for processing sentences and updating the result map
-            String[] words = sentence.split("\\s+");
-            for (String word : words) {
-                result.merge(word, 1, Integer::sum);
+        for(String sentence : sentences){
+            String[] sentenceList = sentence.substring(0, sentence.length() - 1).split(" ");
+            for (String element : sentenceList) {
+                result.add(element);
             }
         }
 
