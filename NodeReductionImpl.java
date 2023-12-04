@@ -15,6 +15,7 @@ public class NodeReductionImpl extends UnicastRemoteObject implements NodeReduct
 
     @Override
     public Map<String, Integer> reduction(Map<String, Integer> hashMap) throws RemoteException {
+        System.out.println(hashMap);
         hashMap.forEach((key, value) -> fullHashMap.merge(key, value, Integer::sum));
         return hashMap;
     }
