@@ -10,6 +10,7 @@ public class WordCounter {
         for(String sentence : sentences){
             String[] sentenceList = sentence.substring(0, sentence.length() - 1).split(" ");
             for (String element : sentenceList) {
+                text.add(element);
             }
         }
     }
