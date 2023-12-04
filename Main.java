@@ -1,37 +1,94 @@
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.util.*;
+import java.util.concurrent.*;
 
-public class Main{
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Initialize RMI registry
+            java.rmi.registry.LocateRegistry.createRegistry(1099);
 
-    public static void main(String[] args){
-        String text = "bonjour je suis Andres et je suis un gros naze";
+            // Start CoordinatorNode
+            Coordinator coordinatorNode = new CoordinatorNode();
+            Naming.rebind("CoordinatorNode", coordinatorNode);
+            System.out.println("CoordinatorNode is ready.");
 
-        WordCounter wc = new WordCounter(text);
-        System.out.println(wc.count());
+            // Create NodeMapping instances for parallel mapping
+            int numMappingNodes = 3; // Adjust based on your needs
+            List<NodeMapping> mappingNodes = new ArrayList<>();
 
-        HashMap<String, Integer> map1 = new HashMap<>();
-        map1.put("A", 1);
-        map1.put("B", 2);
-        map1.put("D", 8);
+            for (int i = 0; i < numMappingNodes; i++) {
+                NodeMapping mappingNode = new NodeMappingImpl();
+                Naming.rebind("MappingNode" + i, mappingNode);
+                mappingNodes.add(mappingNode);
+                System.out.println("MappingNode" + i + " is ready.");
+            }
 
-        HashMap<String, Integer> map2 = new HashMap<>();
-        map2.put("B", 3);
-        map2.put("C", 4);
-        map2.put("E", 7);
+            // Generate a list of sentences for processing
+            List<String> sentences = Arrays.asList(
+                    "This is sentence one.",
+                    "Another sentence here.",
+                    "Yet another sentence for testing."
+            );
 
-        HashMap<String, Integer> map3 = new HashMap<>();
-        map3.put("A", 1);
-        map3.put("C", 4);
-        map3.put("E", 2);
+            // Perform parallel mapping using ExecutorService
+            ExecutorService executorService = Executors.newFixedThreadPool(numMappingNodes);
+            List<Future<Map<String, Integer>>> mappingResults = new ArrayList<>();
 
-        ArrayList<HashMap<String, Integer>> list = new ArrayList<>();
-        list.add(map1);
-        list.add(map2);
-        list.add(map3);
+            for (int i = 0; i < numMappingNodes; i++) {
+                int startIndex = i * (sentences.size() / numMappingNodes);
+                int endIndex = (i + 1) * (sentences.size() / numMappingNodes);
 
-        Reducer r = new Reducer(list);
-        System.out.println(r.testMerge());
+                List<String> subList = sentences.subList(startIndex, endIndex);
 
+                int finalI = i;
+                Callable<Map<String, Integer>> mappingTask = () -> {
+                    NodeMapping mappingNode = mappingNodes.get(finalI);
+                    return mappingNode.mapping(processSentences(subList));
+                };
+
+                Future<Map<String, Integer>> future = executorService.submit(mappingTask);
+                mappingResults.add(future);
+            }
+
+            // Wait for mapping tasks to complete
+            executorService.shutdown();
+            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+
+            // Aggregate mapping results
+            Map<String, Integer> aggregatedMapResult = new HashMap<>();
+
+            for (Future<Map<String, Integer>> result : mappingResults) {
+                aggregatedMapResult.putAll(result.get());
+            }
+
+            // Submit aggregated mapping result to CoordinatorNode
+            coordinatorNode.submitMapResult(aggregatedMapResult);
+
+            // Perform reduction
+            NodeReduction reductionNode = new NodeReductionImpl();
+            Map<String, Integer> finalResult = reductionNode.reduction(coordinatorNode.getReduceResult());
+
+            // Display the final result
+            System.out.println("Final Result: " + finalResult);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
+    private static Map<String, Integer> processSentences(List<String> sentences) {
+        Map<String, Integer> result = new HashMap<>();
+
+        for (String sentence : sentences) {
+            // Implement your own logic for processing sentences and updating the result map
+            String[] words = sentence.split("\\s+");
+            for (String word : words) {
+                result.merge(word, 1, Integer::sum);
+            }
+        }
+
+        return result;
+    }
 }

@@ -1,19 +1,19 @@
-// CoordinatorNode.java
-
+import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CoordinatorNode extends UnicastRemoteObject {
+public class CoordinatorNode extends UnicastRemoteObject implements Coordinator {
     private Map<String, Integer> reduceResult = new HashMap<>();
 
     public CoordinatorNode() throws RemoteException {
         // Constructor
     }
 
-    public void submitMapResult(Map<String, Integer> mapResult) {
+    @Override
+    public void submitMapResult(Map<String, Integer> mapResult) throws RemoteException {
         // Handle Map results and update reduceResult
         for (Map.Entry<String, Integer> entry : mapResult.entrySet()) {
             String word = entry.getKey();
@@ -24,7 +24,8 @@ public class CoordinatorNode extends UnicastRemoteObject {
         }
     }
 
-    public Map<String, Integer> getReduceResult() {
+    @Override
+    public Map<String, Integer> getReduceResult() throws RemoteException {
         // Return the final reduceResult
         return reduceResult;
     }
@@ -35,7 +36,7 @@ public class CoordinatorNode extends UnicastRemoteObject {
             CoordinatorNode coordinatorNode = new CoordinatorNode();
             java.rmi.Naming.rebind("CoordinatorNode", coordinatorNode);
             System.out.println("CoordinatorNode is ready.");
-        } catch (Exception e) {
+        } catch (RemoteException | MalformedURLException e) {
             e.printStackTrace();
         }
     }
