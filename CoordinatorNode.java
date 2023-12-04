@@ -30,14 +30,5 @@ public class CoordinatorNode extends UnicastRemoteObject implements Coordinator 
         return reduceResult;
     }
 
-    public static void main(String[] args) {
-        try {
-            java.rmi.registry.LocateRegistry.createRegistry(1099);
-            CoordinatorNode coordinatorNode = new CoordinatorNode();
-            java.rmi.Naming.rebind("CoordinatorNode", coordinatorNode);
-            System.out.println("CoordinatorNode is ready.");
-        } catch (RemoteException | MalformedURLException e) {
-            e.printStackTrace();
-        }
-    }
+
 }
