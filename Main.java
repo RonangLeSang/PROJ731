@@ -56,10 +56,10 @@ public class Main {
             executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
 
             // Aggregate mapping results
-            Map<String, Integer> aggregatedMapResult = new HashMap<>();
+            ArrayList<Future<Map<String, Integer>>> aggregatedMapResult = new ArrayList<Future<Map<String, Integer>>>();
 
             for (Future<Map<String, Integer>> result : mappingResults) {
-                aggregatedMapResult.putAll(result.get());
+                aggregatedMapResult.add(result);
             }
 
             // Submit aggregated mapping result to CoordinatorNode

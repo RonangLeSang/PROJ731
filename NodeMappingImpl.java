@@ -19,7 +19,6 @@ public class NodeMappingImpl extends UnicastRemoteObject implements NodeMapping 
         for(String word : text){
             if(wordCount.containsKey(word)){
                 wordCount.put(word, wordCount.get(word)+1);
-                System.out.println("oui");
             }else{
                 wordCount.put(word, 1);
             }
